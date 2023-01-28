@@ -40,7 +40,6 @@ export class StatusSelectComponent implements OnInit {
   }
 
   updateStatus(status: rsvp){
-    debugger;
     this.guestStatus.inviteCode = this.guestInviteCode!;
     this.guestStatus.status = status;
     this.updateGuestsList(this.guestStatus);
@@ -49,7 +48,7 @@ export class StatusSelectComponent implements OnInit {
   updateGuestsList(guestStatus: guestRsvp) {
     const codeToNameAPI = `http://localhost:4000/dev/update-guest-rsvp/${this.guestStatus.inviteCode}`;
         this.http.post<guestRsvp>(codeToNameAPI, guestStatus).subscribe(json => {
-          debugger;
+          
       })
   }
 

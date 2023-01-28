@@ -30,11 +30,9 @@ export class AppComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       let inviteCodeParam = params['invite_code'];
       if (inviteCodeParam){
-        debugger;
         this.inviteCode$ = inviteCodeParam;
         const codeToNameAPI = `http://localhost:3000/dev/invite_code/${this.inviteCode$}`;
         this.http.get<guestEM>(codeToNameAPI).subscribe(guest => {
-          debugger;
           this.guestName$ = guest.firstName;
         })
       }
