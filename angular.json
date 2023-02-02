@@ -51,6 +51,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "Wedding__landing-page-pwa",
               "outputHashing": "all"
             },
             "development": {
