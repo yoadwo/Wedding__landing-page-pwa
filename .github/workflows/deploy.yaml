@@ -2,11 +2,11 @@ name: Deploy To Self Branch
 on:
   push:	
     branches:	
-      - master
+      - easy2give
 
 defaults:
   run:
-    working-directory: bamba-admin-pwa
+    working-directory: ./
 
 jobs:
   deploy:
