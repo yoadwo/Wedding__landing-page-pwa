@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       let inviteCodeParam = params['invite_code'];
       if (inviteCodeParam){
         this.inviteCode$ = inviteCodeParam;
-        const codeToNameAPI = `http://localhost:3000/dev/invite_code/${this.inviteCode$}`;
+        const codeToNameAPI = `https://zhzd7fvjp9.execute-api.us-east-1.amazonaws.com/dev/invite_code/${this.inviteCode$}`;
         this.http.get<guestEM>(codeToNameAPI).subscribe(guest => {
           this.guestName$ = guest.firstName;
         })
