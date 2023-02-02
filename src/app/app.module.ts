@@ -8,12 +8,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EventStaticInfoComponent } from './components/event-static-info/event-static-info.component';
 import { StatusSelectComponent } from './components/status-select/status-select.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventStaticInfoComponent,
-    StatusSelectComponent
+    StatusSelectComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

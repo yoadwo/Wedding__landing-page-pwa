@@ -1,17 +1,1 @@
-<div id="guestLanding" class="col-xs-12 guest-landing">
-  <header id="logo" class="col-xs-12">
-  </header>
-  <div id="main" class="col-xs-12">
-    <div id="background-image" class="col-xs-12 img-wrap"></div>
-    <div id="content" class="col-xs-12">
-      <div id="form_guest_status" accept-charset="UTF-8">
-        <div [hidden]="!this.guestName$">
-          <app-event-static-info [guestFirstName]="this.guestName$"></app-event-static-info>
-          <app-status-select [guestInviteCode]="this.inviteCode$"></app-status-select>
-        </div>
-      </div>
-      <a id="status_wrong_number" style="position: relative; z-index: 5; margin-top: 20px; height: 20px"
-        href="https://l.e2grsvp.com/e/378620854/wrong_number">טעות במספר?</a>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>
