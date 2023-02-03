@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'easy2give-template-1';
+  title = 'אישור הגעה לחתונה של שירלי ויועד';
   
   constructor(){}
 
