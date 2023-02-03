@@ -5743,33 +5743,7 @@ a.fc-more:hover {
 .easy2gift-link:focus {
     color: #f6af42;
 }
-.buyme-link,
-.buyme-link:hover,
-.buyme-link:active,
-.buyme-link:focus {
-    display: block;
-    max-width: 320px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    height: 95px;
-    background: none;
-    background-image: url(/images/buyme_button.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 25px;
-    box-shadow: none;
-    outline: 0;
-    outline-offset: 0;
-}
+
 #submitWrap .button-form.selected_status {
     background-color: #b69d6b !important;
 }
@@ -5868,7 +5842,7 @@ a.fc-more:hover {
 }
 .guest-landing .img-wrap {
     padding: 0;
-    height: 200px;
+    height: 100px;
     overflow: hidden;
 }
 .guest-landing .img-wrap img {

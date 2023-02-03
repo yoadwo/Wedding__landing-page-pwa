@@ -1,4 +1,5 @@
 #background-image {
-    background-image: url('../assets/images/arya-02.jpg');
-    background-position: center center
+    background-position: center center;
+    object-fit: cover
 }
+
