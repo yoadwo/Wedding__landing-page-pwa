@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(){
     this.route.queryParams.subscribe(params => {
-      let inviteCodeParam = params['invite_code'];
+      let inviteCodeParam = params['code'];
       if (inviteCodeParam){
         this.inviteCode$ = inviteCodeParam;
         const codeToNameAPI = `https://zhzd7fvjp9.execute-api.us-east-1.amazonaws.com/dev/invite_code/${this.inviteCode$}`;
