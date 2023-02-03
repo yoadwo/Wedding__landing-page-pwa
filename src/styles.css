@@ -5849,19 +5849,6 @@ a.fc-more:hover {
     height: auto;
     width: 100%;
 }
-.guest-landing p {
-    padding: 0 10px;
-    margin: 27px 0;
-    font-size: 21px;
-    color: #333333;
-    font-weight: normal;
-    text-align: center;
-}
-.guest-landing #eventDate {
-    font-size: 40px;
-    margin: 10px 0;
-    display: block;
-}
 .guest-landing #main {
     padding: 0;
     position: relative;

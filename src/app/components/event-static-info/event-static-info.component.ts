@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 
+import 'add-to-calendar-button';
+
 @Component({
   selector: 'app-event-static-info',
   templateUrl: './event-static-info.component.html',
