@@ -1,4 +1,4 @@
-name: Deploy To Self Branch
+name: Deploy To branch "domain" (with empty base href)
 on:
   push:	
     branches:	

@@ -1,4 +1,4 @@
-name: Deploy To Self Branch
+name: Deploy To gh-pages (with base href)
 on:
   push:	
     branches:	
