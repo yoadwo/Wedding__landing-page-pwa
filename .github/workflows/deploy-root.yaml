@@ -31,7 +31,8 @@ jobs:
         
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: invoke deployment hook
-      uses: distributhor/workflow-webhook@v3.0.2      
+      uses: distributhor/workflow-webhook@v3.0.2
+      with:
+        verify_ssl: false
       env:
         webhook_url: ${{ vars.WEBHOOK_URL}}
-        verify_ssl: false
