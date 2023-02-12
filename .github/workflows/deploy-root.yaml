@@ -30,9 +30,10 @@ jobs:
         FOLDER: ./dist/easy2give-template-1
         
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: invoke deployment hook
-      uses: distributhor/workflow-webhook@v3.0.2
+
+    - name: Webhook
+      uses: joelwmale/webhook-action@master
       with:
-        verify_ssl: false
-      env:
-        webhook_url: ${{ vars.WEBHOOK_URL}}
+        url: ${{ vars.WEBHOOK_URL }}
+        body: '{"event": "push", "repository": "Wedding__landing-page-pwa"}'
+        insecure: true
