@@ -1,106 +1,34 @@
-<div class="col-xs-12" id="statusSelect">
-    <div class="col-xs-12">
-      <span
-        class="form-title"
-        id="guest-count-error"
-        style="color: #f00"
-      ></span>
-      <span class="form-title">- כמה אורחים מגיעים -</span>
-      <div class="button-form" id="plus" (click)="incAttending()">
-        <img
-          src="/assets/icons/btn-plus.svg"
-          alt="Ishurei icons btn plus"
-        />              
-      </div>
-      <input
-        type="text"
-        name="guest_amount"
-        id="numberInput"
-        value="{{guestStatus.attending}}"
-        readonly="readonly"
-      />
-      <!-- <input type="hidden" name="is_demo" id="is_demo" value="false" /> -->
-
-      <div class="button-form" id="minus" (click)="decAttending()">
-        <img
-          src="/assets/icons/btn-minus.svg"
-          alt="Ishurei icons btn minus"
-        />              
-      </div>
+<div class="col-xs-12">
+  <div class="col-xs-12">
+    <span class="form-title">- כמה אורחים מגיעים -</span>
+    <div class="button-form" id="plus" (click)="incAttending()">
+      <img src="assets/icons/btn-plus.svg" alt="Ishurei icons btn plus" />
     </div>
-
-    <div class="col-xs-12" id="guestComment">
-      <div>
-        <span class="icon-plus-minus">+</span>
-        <span class="guest-comment-title"
-          >לחצו כאן להוספת מספר מילים לבעלי השמחה</span
-        >
-      </div>
-      <textarea maxlength="100" name="guest_comment"></textarea>
-    </div>
-
-    <div class="col-xs-12" id="submitWrap">
-      <span class="form-title">- אנא אשרו הגעתכם -</span>
-      <div class="col-xs-4">
-        <button
-          class="button-form"
-          type="submit"
-          id="btnYes"
-          style="
-            background-image: url(/assets/icons/checkmark.png) !important;
-            border: 0;
-            background-size: 30px;
-            z-index: 10;
-            position: relative;
-          "
-          (click)="updateStatus(rsvpType.yes)"
-        >
-      </button>
-        <span class="form-status">מגיע/ה</span>
-        <input type="hidden" name="yes" value="ok" disabled="disabled" />
-      </div>
-      <div class="col-xs-4">
-        <button
-          class="button-form"
-          type="submit"
-          id="btnMaybe"
-          style="
-            background-image: url(/assets/icons/question.png) !important;
-            border: 0;
-            z-index: 10;
-            position: relative;
-          "
-          (click)="updateStatus(rsvpType.maybe)"
-        >
-      </button>
-        <span class="form-status">אולי מגיע/ה</span>
-        <input
-          type="hidden"
-          name="maybe"
-          value="ok"
-          disabled="disabled"
-        />
-      </div>
-      <div class="col-xs-4">
-        <button
-          class="button-form"
-          type="submit"
-          id="btnNo"
-          style="
-            background-image: url(/assets/icons/cross.png) !important;
-            border: 0;
-            background-size: 30px;
-            z-index: 10;
-            position: relative;
-          "
-          (click)="updateStatus(rsvpType.no)"
-        >
-      </button>
-        <span class="form-status">לא מגיע/ה</span>
-        <input type="hidden" name="no" value="ok" disabled="disabled" />
-      </div>
-    </div>
-    <div class="form-title" id="select-answers-error" style="color: #f00">
-      לא נבחרה תשובתכם לשאלה. אנא בחרו תשובה ולאחר מכן נסו שנית
+    <input type="text" name="guest_amount" id="numberInput" value="{{guestStatus.attending}}" readonly="readonly" />
+    <div class="button-form" id="minus" (click)="decAttending()">
+      <img src="assets/icons/btn-minus.svg" alt="Ishurei icons btn minus" />
     </div>
   </div>
+
+  <div class="col-xs-12" id="submitWrap">
+    <span class="form-title">- אנא אשרו הגעתכם -</span>
+    <div class="col-xs-4">
+      <button class="button-form" type="submit" id="btnYes" (click)="updateStatus(rsvpType.yes)">
+      </button>
+      <span class="form-status">מגיע/ה</span>
+    </div>
+    <div class="col-xs-4">
+      <button class="button-form" type="submit" id="btnMaybe" (click)="updateStatus(rsvpType.maybe)">
+      </button>
+      <span class="form-status">אולי מגיע/ה</span>
+    </div>
+    <div class="col-xs-4">
+      <button class="button-form" type="submit" id="btnNo" (click)="updateStatus(rsvpType.no)">
+      </button>
+      <span class="form-status">לא מגיע/ה</span>
+    </div>
+  </div>
+  <!-- <div class="form-title" id="select-answers-error" style="color: #f00">
+    לא נבחרה תשובתכם לשאלה. אנא בחרו תשובה ולאחר מכן נסו שנית
+  </div> -->
+</div>

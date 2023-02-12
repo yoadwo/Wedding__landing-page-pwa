@@ -1,0 +1,19 @@
+p {
+    padding: 0 10px;
+    margin: 27px 0;
+    font-size: 21px;
+    color: #333333;
+    font-weight: normal;
+    text-align: center;
+}
+.eventDate {
+    /* font-size: 40px; */
+    margin: 10px 0;
+    display: block;
+}
+
+#calendarButton {
+    position: relative;
+    display: block;
+    margin: auto;
+}
