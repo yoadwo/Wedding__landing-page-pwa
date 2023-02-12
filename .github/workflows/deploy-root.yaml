@@ -2,7 +2,7 @@ name: Deploy To branch "domain" (with empty base href)
 on:
   push:	
     branches:	
-      - easy2give
+      - master
 
 defaults:
   run:
@@ -30,3 +30,7 @@ jobs:
         FOLDER: ./dist/easy2give-template-1
         
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: invoke deployment hook
+      uses: distributhor/workflow-webhook@v3.0.2
+      env:
+        webhook_url: ${{ env.WEBHOOK_URL}}

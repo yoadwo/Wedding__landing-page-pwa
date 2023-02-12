@@ -2,7 +2,7 @@ name: Deploy To gh-pages (with base href)
 on:
   push:	
     branches:	
-      - easy2give
+      - dev
 
 defaults:
   run:
