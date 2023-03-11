@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-status-select',
@@ -46,7 +47,7 @@ export class StatusSelectComponent implements OnInit {
   }
 
   updateGuestsList(guestStatus: guestRsvp) {
-    const codeToNameAPI = `https://r5wele8vrf.execute-api.us-east-1.amazonaws.com/dev/update-guest-rsvp/${this.guestStatus.inviteCode}`;
+    const codeToNameAPI = `${environment.updateGuestRsvpBaseUrl}/update-guest-rsvp/${this.guestStatus.inviteCode}`;
         this.http.post<guestRsvp>(codeToNameAPI, guestStatus).subscribe(json => {
           alert('נתראה בחתונה!');
       })
