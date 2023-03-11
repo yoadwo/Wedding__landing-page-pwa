@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build-for-dev": "ng build --configuration build-for-dev",
-    "build-deploy-as-root": "ng build --configuration deploy-as-root",
+    "build-for-PROD": "ng build --configuration build-for-PROD",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

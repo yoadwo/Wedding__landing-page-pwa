@@ -20,7 +20,7 @@ jobs:
         node-version: 16.x
     - run: npm ci
       working-directory: ./
-    - run: npm run build-deploy-as-root --if-present
+    - run: npm run build-for-PROD --if-present
       working-directory: ./
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop

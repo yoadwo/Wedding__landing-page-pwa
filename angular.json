@@ -75,7 +75,7 @@
               ],
               "outputHashing": "all"
             },
-            "deploy-as-root": {
+            "build-for-PROD": {
               "budgets": [
                 {
                   "type": "initial",
