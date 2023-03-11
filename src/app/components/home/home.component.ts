@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { guestEM } from '../../models/guestEM';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +29,7 @@ export class HomeComponent implements OnInit {
       let inviteCodeParam = params['code'];
       if (inviteCodeParam){
         this.inviteCode$ = inviteCodeParam;
-        const codeToNameAPI = `https://zhzd7fvjp9.execute-api.us-east-1.amazonaws.com/dev/invite_code/${this.inviteCode$}`;
+        const codeToNameAPI = `${environment.invitecodeToNameBaseUrl}/invite_code/${this.inviteCode$}`;
         this.http.get<guestEM>(codeToNameAPI).subscribe(guest => {
           this.guestName$ = guest.firstName;
         })
