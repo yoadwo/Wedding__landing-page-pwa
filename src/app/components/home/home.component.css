@@ -1,3 +1,10 @@
 img {
     max-width: 100%;
 }
+
+#flowers-top {
+    background-position: center center;
+    object-fit: contain;
+    height: 150px;
+    margin-bottom: 10px
+}

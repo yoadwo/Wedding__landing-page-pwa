@@ -6,12 +6,30 @@ p {
     font-weight: normal;
     text-align: center;
 }
+#title {
+    letter-spacing: 0.025em;
+    word-spacing: 0.01em;
+    color:black
+}
+#secondary-title {
+    color:rgb(48, 48, 48)
+}
+p, h1, h2, h3, h4 {
+    font-family: 'Assistant';
+    padding: 0 10px;
+    margin: 27px 0;
+    /* font-size: 21px; */
+    color: #333333;
+    font-weight: normal;
+    text-align: center;
+}
 .eventDate {
-    /* font-size: 40px; */
+    font-size: 50px;
+    letter-spacing: 0.03em;
     margin: 10px 0;
     display: block;
+    font-family: 'GveretLevin-AAA-Reular';
 }
-
 #calendarButton {
     position: relative;
     display: block;

@@ -1,4 +1,5 @@
 <div id="content" class="col-xs-12">
+  <img id="flowers-top" src="assets/images/flowers_top_cropped.png" class="col-xs-12 img-wrap" alt="colorful flowers" />
   <div id="form_guest_status" *ngIf="this.guestName$; else loading" accept-charset="UTF-8">
     <app-event-static-info [guestFirstName]="this.guestName$"></app-event-static-info>
     <app-status-select [guestInviteCode]="this.inviteCode$"></app-status-select>
