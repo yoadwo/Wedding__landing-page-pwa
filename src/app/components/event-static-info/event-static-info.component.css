@@ -30,9 +30,7 @@ p, h1, h2, h3, h4 {
 .eventDate {
     font-size: 50px;
     letter-spacing: 0.03em;
-    /* margin: 10px 0; */
     margin: -15px 0;
-    display: block;
     font-family: 'GveretLevin-AAA-Reular';
 }
 #calendarButton {

@@ -20,3 +20,18 @@
             z-index: 10;
             position: relative;
 }
+
+.buttons-container{
+    display:flex;
+    justify-content: center;
+}
+
+p, h1, h2, h3, h4 {
+    font-family: 'Assistant';
+    /* padding: 0 10px; */
+    /* margin: 27px 0; */
+    /* font-size: 21px; */
+    color: #333333;
+    font-weight: normal;
+    text-align: center;
+}
