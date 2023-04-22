@@ -1,5 +1,4 @@
 name: Deploy To gh-pages (with base href)
-description: using this as a TEST environment
    
 on:
   push:	
