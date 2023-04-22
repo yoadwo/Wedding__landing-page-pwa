@@ -5,6 +5,9 @@ on:
       branch-ref:
         type: string
         required: true
+      dist-subdir-name:
+        type: string
+        required: true
 
 defaults:
   run:
@@ -31,6 +34,6 @@ jobs:
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: ./dist/easy2give-template-1
+        FOLDER: ./dist/${{ github.event.inputs.dist-subdir-name }}
         
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
