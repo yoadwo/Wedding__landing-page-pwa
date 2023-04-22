@@ -5856,7 +5856,7 @@ a.fc-more:hover {
 }
 .guest-landing .img-wrap {
     padding: 0;
-    height: 100px;
+    /* height: 100px; */
     overflow: hidden;
 }
 .guest-landing .img-wrap img {
@@ -5945,11 +5945,11 @@ a.fc-more:hover {
 .guest-landing #numberInput {
     width: 100px;
     vertical-align: bottom;
-    margin: 0 10px;
+    margin: 0 30px;
     height: 50px;
     font-size: 23px;
     font-weight: bold;
-    background-color: #ebe3de;
+    background-color: #d4e8cb;
     text-align: center;
 }
 .guest-landing #btnNo {

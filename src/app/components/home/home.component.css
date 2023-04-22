@@ -8,3 +8,8 @@ img {
     height: 150px;
     margin-bottom: 10px
 }
+
+/* on mobile devices take some padding between top flowers */
+@media (max-width:768px) { 
+    #content { padding-top: 50px; } 
+} 
