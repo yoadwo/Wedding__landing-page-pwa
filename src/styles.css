@@ -5730,17 +5730,17 @@ a.fc-more:hover {
 }
 @font-face {
     font-family: 'assistant';
-    src: url('/assets/fonts/assistant/static/Assistant-Bold.ttf');
-    src: url('/assets/fonts/assistant/static/Assistant-SemiBold.ttf');
-    src: url('/assets/fonts/assistant/static/Assistant-ExtraBold.ttf');
-    src: url('/assets/fonts/assistant/static/Assistant-Light.ttf');
-    src: url('/assets/fonts/assistant/static/Assistant-ExtraLight.ttf');
-    src: url('/assets/fonts/assistant/static/Assistant-Medium.ttf');
-    src: url('/assets/fonts/assistant/static/Assistant-Regular.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-Bold.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-SemiBold.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-ExtraBold.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-Light.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-ExtraLight.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-Medium.ttf');
+    src: url('./assets/fonts/assistant/static/Assistant-Regular.ttf');
 }
 @font-face {
     font-family: 'GveretLevin-AAA-Reular';
-    src: url('/assets/fonts/gveret-levin-alefalefalef-regular/Gveret-Levin-AlefAlefAlef-Regular.ttf')
+    src: url('./assets/fonts/gveret-levin-alefalefalef-regular/Gveret-Levin-AlefAlefAlef-Regular.ttf')
 }
 @font-face {
     font-family: Gisha;
