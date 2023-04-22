@@ -5740,7 +5740,7 @@ a.fc-more:hover {
 }
 @font-face {
     font-family: 'GveretLevin-AAA-Reular';
-    src: url('assets/fonts/Gveret-Levin-AlefAlefAlef-Regular/Gveret-Levin-AlefAlefAlef-Regular.ttf')
+    src: url('/assets/fonts/Gveret-Levin-AlefAlefAlef-Regular/Gveret-Levin-AlefAlefAlef-Regular.ttf')
 }
 @font-face {
     font-family: Gisha;
