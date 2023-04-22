@@ -1,4 +1,5 @@
-name: Deploy To gh-pages (with base href)
+name: Deploy To gh-pages manually
+description: must specify branch name in dispatch params
 on:
   push:	
     branches:	
