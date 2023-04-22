@@ -1,0 +1,39 @@
+name: Deploy To gh-pages (with base href)
+on:
+  push:	
+    branches:	
+      - dev
+  workflow_dispatch:
+    inputs:
+      branch-ref:
+        type: string
+        required: true
+
+defaults:
+  run:
+    working-directory: ./
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@v3
+      with: 
+        ref: ${{ github.event.inputs.branch-ref }}
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16.x
+    - run: npm ci
+      working-directory: ./
+    - run: npm run build-for-dev --if-present
+      working-directory: ./
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: ./dist/easy2give-template-1
+        
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
