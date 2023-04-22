@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/easy2give-template-1'),
+      dir: require('path').join(__dirname, './coverage/shirley-template-1'),
       subdir: '.',
       reporters: [
         { type: 'html' },
