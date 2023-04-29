@@ -25,7 +25,7 @@ jobs:
     - name: Update my-file.json description
       uses: jossef/action-set-json-field@v2.1
       with:
-        file: ./src/environment/extra.json
+        file: ./src/environments/extra.json
         field: ApiKey_inviteCode
         value: ${{ secrets.ApiKey_inviteCode }}
     - run: npm run build-for-dev --if-present
