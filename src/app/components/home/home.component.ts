@@ -7,6 +7,10 @@ import { catchError, retry } from 'rxjs/operators';
 import { guestEM } from '../../models/guestEM';
 import { environment } from 'src/environments/environment';
 
+import { default as secrets } from 'src/environments/extra.json';
+
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -28,9 +32,12 @@ export class HomeComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       let inviteCodeParam = params['code'];
       if (inviteCodeParam){
+        const headers = {
+          'X-API-KEY': secrets['ApiKey_inviteCode'],
+        }
         this.inviteCode$ = inviteCodeParam;
         const codeToNameAPI = `${environment.invitecodeToNameBaseUrl}/invite_code/${this.inviteCode$}`;
-        this.http.get<guestEM>(codeToNameAPI).subscribe(guest => {
+        this.http.get<guestEM>(codeToNameAPI, {headers}).subscribe(guest => {
           this.guestName$ = guest.firstName;
         })
       }
