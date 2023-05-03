@@ -51,7 +51,7 @@ export class StatusSelectComponent implements OnInit {
   updateGuestsList(guestStatus: guestRsvp) {
     const codeToNameAPI = `${environment.updateGuestRsvpBaseUrl}/update-guest-rsvp/${this.guestStatus.inviteCode}`;
     const headers = {
-      'X-API-KEY': secrets['ApiKey_inviteCode'],
+      'X-API-KEY': secrets['ApiKey_updateGuestRsvp'],
     }
     this.http.post<guestRsvp>(codeToNameAPI, guestStatus, {headers}).subscribe(json => {
       alert('נתראה בחתונה!');
