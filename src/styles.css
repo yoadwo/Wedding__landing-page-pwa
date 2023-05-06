@@ -32,14 +32,6 @@ body {
     z-index: 1;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: 50px;
-}
-
 .button {
     background-color: white;
     color: black;

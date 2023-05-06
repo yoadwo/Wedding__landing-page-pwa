@@ -5,6 +5,7 @@
 
 .buttons-container div {
     cursor: pointer;
+    z-index: 1;
 }
 
 p, h1, h2, h3, h4 {
@@ -15,4 +16,14 @@ p, h1, h2, h3, h4 {
     color: #333333;
     font-weight: normal;
     text-align: center;
+}
+
+#numberInput {
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  width: 60px; /* buttons are originally 60x60*/
 }
