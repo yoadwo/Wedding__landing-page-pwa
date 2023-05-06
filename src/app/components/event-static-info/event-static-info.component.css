@@ -10,25 +10,29 @@ p {
     letter-spacing: 0.025em;
     word-spacing: 0.01em;
     color:black;
-    margin: 27px 0;
-    padding: 0 10px;
+    /* margin: 27px 0; */
+    /* padding: 0 10px; */
+    margin: 0;
 }
 #secondary-title {
     color:rgb(48, 48, 48);
-    margin: 27px 0;
-    padding: 0 10px;
+    /* margin: 27px 0; */
+    /* padding: 0 10px; */
+    margin-top: 0.33em;
 }
 
 #header {
     font-size: 30px;
     text-align: center;
     padding-top: 50px;
+    font-family: 'Assistant';
 }
 
 #subheader {
     font-size: 20px;
     text-align: center;
     padding-top: 20px;
+    font-family: 'Assistant';
 }
 
 p, h1, h2, h3, h4 {
@@ -48,9 +52,7 @@ p, h1, h2, h3, h4 {
     /* font-family: 'GveretLevin-AAA-Reular'; */
 }
 #calendarButton {
-    position: relative;
-    display: block;
-    margin: auto;
+
 }
 .inline-flex-reversed{
     display: inline-flex;
