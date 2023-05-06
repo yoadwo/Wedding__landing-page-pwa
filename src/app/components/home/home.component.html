@@ -1,13 +1,12 @@
-<div id="content" class="col-xs-12">
-  <!-- <img id="flowers-top" src="assets/images/flowers_top_cropped.png" class="col-xs-12 img-wrap" alt="colorful flowers" /> -->
+<div>
   <div id="form_guest_status" *ngIf="this.guestName$; else loading" accept-charset="UTF-8">
     <app-event-static-info [guestFirstName]="this.guestName$"></app-event-static-info>
     <app-status-select [guestInviteCode]="this.inviteCode$"></app-status-select>
-    <a id="status_wrong_number" style="position: relative; z-index: 5; margin-top: 20px; height: 20px"
-      href="https://l.e2grsvp.com/e/378620854/wrong_number">טעות במספר?</a>
+    <a id="status_wrong_number"
+      href="https://l.e2grsvp.com/e/378620854/wrong_number">?טעות במספר</a>
   </div>
   <ng-template #loading>
-    <h2>הגעת הנה לפנינו..</h2>
-    <img src="assets/images/rafael-mantesso-jimmychoo.gif" alt="running dog while loading page">
+    <h2 id="loading-prompt">..הגעת הנה לפנינו</h2>
+    <img id="loading-animation" src="assets/images/rafael-mantesso-jimmychoo.gif" alt="running dog while loading page">
   </ng-template>
 </div>

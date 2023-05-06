@@ -2,6 +2,29 @@ img {
     max-width: 100%;
 }
 
+#loading-prompt {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#loading-animation {
+    display: block;
+    margin: 0 auto;
+}
+
+#status_wrong_number {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    place-content: center;    
+    
+    
+}
+#status_wrong_number:hover {
+    background-color: transparent;
+    color: #333;
+}
+
 #flowers-top {
     background-position: center center;
     object-fit: contain;
@@ -10,6 +33,6 @@ img {
 }
 
 /* on mobile devices take some padding between top flowers */
-@media (max-width:768px) { 
+/* @media (max-width:768px) { 
     #content { padding-top: 50px; } 
-} 
+}  */

@@ -1,8 +1,6 @@
-#background-image {
-    background-position: center center;
-    object-fit: cover;
-    position: absolute;
-    z-index: 1;
-    max-height: 100%;
+.bg {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color:seashell
 }
 
