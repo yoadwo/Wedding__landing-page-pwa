@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
         this.inviteCode$ = inviteCodeParam;
         const codeToNameAPI = `${environment.invitecodeToNameBaseUrl}/invite_code/${this.inviteCode$}`;
         this.http.get<guestEM>(codeToNameAPI, {headers}).subscribe(guest => {
-          this.guestName$ = guest.firstName;
+          this.guestName$ = guest.recipient;
         })
       }
       
