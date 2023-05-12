@@ -28,13 +28,13 @@ jobs:
       with:
         file: ./src/environments/extra.json
         field: ApiKey_inviteCode
-        value: ${{ secrets.ApiKey_inviteCode }}
+        value: ${{ vars.ApiKey_inviteCode }}
     - name: update extras with key for update guest rsvp
       uses: jossef/action-set-json-field@v2.1
       with:
         file: ./src/environments/extra.json
         field: ApiKey_updateGuestRsvp
-        value: ${{ secrets.ApiKey_updateGuestRsvp }}
+        value: ${{ vars.ApiKey_updateGuestRsvp }}
     - run: npm run build-for-dev --if-present
       working-directory: ./
     - name: Deploy
