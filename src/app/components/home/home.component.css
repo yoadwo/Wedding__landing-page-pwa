@@ -15,22 +15,62 @@ img {
 #status_wrong_number {
     padding-top: 10px;
     margin-bottom: 20px;
-    display: flex;
-    place-content: center;    
-    
-    
+    text-align: center;
+    font-family: 'Assistant';
+    cursor: help;
 }
+
 #status_wrong_number:hover {
     background-color: transparent;
     color: #333;
 }
 
-#flowers-top {
-    background-position: center center;
-    object-fit: contain;
-    height: 150px;
-    margin-bottom: 10px
+.top-flowers {
+    max-height: 60px;
+    margin: 0 calc(50% - 60px);
 }
+
+.right-flowers {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    height: 40%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.left-flowers {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: 35%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.bottom-flowers {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 15%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Adjust the height for mobile screens */
+@media (max-width: 767px) {
+    .left-flowers {
+        height: 15%;
+        top: 45% 
+    }
+    .right-flowers {
+        height: 15%;
+      }
+    .bottom-flowers {
+        height: 10%;
+        top: 75%
+    }
+  }
 
 /* on mobile devices take some padding between top flowers */
 /* @media (max-width:768px) { 

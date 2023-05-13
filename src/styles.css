@@ -14,24 +14,6 @@ body {
     z-index: -1;
 }
 
-.right-flowers {
-    position: absolute;
-    top: 20%;
-    right: 0;
-    height: 35%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.left-flowers {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    height: 30%;
-    object-fit: cover;
-    z-index: 1;
-}
-
 .button {
     background-color: white;
     color: black;
