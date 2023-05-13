@@ -1,19 +1,42 @@
 p {
-    padding: 0 10px;
-    margin: 27px 0;
+    /* padding: 0 10px;
+    margin: 27px 0; */
     font-size: 21px;
     color: #333333;
     font-weight: normal;
     text-align: center;
 }
-.eventDate {
-    /* font-size: 40px; */
-    margin: 10px 0;
-    display: block;
+#title {
+    letter-spacing: 0.025em;
+    word-spacing: 0.01em;
+    color:black;
+    margin: 0;
+    /* margin: 27px 0; */
+    /* padding: 0 10px; */
+}
+#secondary-title {
+    color:rgb(48, 48, 48);
+    margin-top: 0.33em;
+    /* margin: 27px 0; */
+    /* padding: 0 10px; */
 }
 
+p, h1, h2, h3, h4 {
+    /* padding: 0 10px; */
+    /* margin: 27px 0; */
+    /* font-size: 21px; */
+    font-family: 'Assistant';
+    color: #333333;
+    font-weight: normal;
+    text-align: center;
+}
+.eventDate {
+    font-size: 50px;
+    letter-spacing: 0.03em;
+    margin: -15px 0;
+    font-family: 'youth action', sans-serif;
+    /* font-family: 'GveretLevin-AAA-Reular'; */
+}
 #calendarButton {
-    position: relative;
-    display: block;
-    margin: auto;
+
 }

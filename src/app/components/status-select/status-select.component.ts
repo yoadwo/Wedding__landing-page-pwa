@@ -6,6 +6,8 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators'
 import { environment } from 'src/environments/environment';
 
+import { default as secrets } from 'src/environments/extra.json';
+
 @Component({
   selector: 'app-status-select',
   templateUrl: './status-select.component.html',
@@ -48,9 +50,12 @@ export class StatusSelectComponent implements OnInit {
 
   updateGuestsList(guestStatus: guestRsvp) {
     const codeToNameAPI = `${environment.updateGuestRsvpBaseUrl}/update-guest-rsvp/${this.guestStatus.inviteCode}`;
-        this.http.post<guestRsvp>(codeToNameAPI, guestStatus).subscribe(json => {
-          alert('נתראה בחתונה!');
-      })
+    const headers = {
+      'X-API-KEY': secrets['ApiKey_updateGuestRsvp'],
+    }
+    this.http.post<guestRsvp>(codeToNameAPI, guestStatus, {headers}).subscribe(json => {
+      alert('נתראה בחתונה!');
+  })
   }
 
 }
