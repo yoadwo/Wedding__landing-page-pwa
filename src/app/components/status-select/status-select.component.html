@@ -1,7 +1,5 @@
 <div>
   <div>
-    <!-- <br />
-    <br /> -->
     <span><h2>?כמה אורחים מגיעים</h2></span>
     <div class="buttons-container" style="column-gap: 20px;">      
       <div id="plus" (click)="incAttending()">
@@ -13,43 +11,20 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="buttons-container">
-    <img src="assets/images/flowers_left.png" style="float: left; position: absolute;" />
-    <br />
-    <img src="assets/images/flowers_right.png" style="float: right; position: absolute;" />
-  </div> -->
   
   <span><h2>אנא אשרו הגעתכם</h2></span>
   <div class="buttons-container" style="column-gap: 40px;">
     <div (click)="updateStatus(rsvpType.yes)">
       <img src="assets/images/invite_yes.png" />
-      <!-- <button class="button-form" type="submit" id="btnYes" (click)="updateStatus(rsvpType.yes)"></button>
-      <span class="form-status">מגיע/ה</span> -->
     </div>
     <div (click)="updateStatus(rsvpType.maybe)">
       <img src="assets/images/invite_maybe.png" />
-      <!-- <button class="button-form" type="submit" id="btnMaybe" (click)="updateStatus(rsvpType.maybe)"></button>
-      <span class="form-status">אולי מגיע/ה</span> -->
     </div>
     <div (click)="updateStatus(rsvpType.no)">
       <img src="assets/images/invite_no.png" />
-      <!-- <button class="button-form" type="submit" id="btnNo" (click)="updateStatus(rsvpType.no)"></button>
-      <span class="form-status">לא מגיע/ה</span> -->
     </div>
   </div>
   <!-- <div class="form-title" id="select-answers-error" style="color: #f00">
     לא נבחרה תשובתכם לשאלה. אנא בחרו תשובה ולאחר מכן נסו שנית
   </div> -->
 </div>
-
-	<!-- <div class="row">
-		<button class="button">Button 1</button>
-		<button class="button">Button 2</button>
-		<button class="button">Button 3</button>
-	</div>
-	<div class="row">
-		<button class="button">Button 4</button>
-		<button class="button">Button 5</button>
-		<button class="button">Button 6</button>
-	</div> -->
