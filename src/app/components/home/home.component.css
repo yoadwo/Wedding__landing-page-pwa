@@ -62,10 +62,11 @@ img {
 @media (max-width: 767px) {
     .left-flowers {
         height: 15%;
-        top: 45% 
+        top: 30% 
     }
     .right-flowers {
         height: 15%;
+        top: 10%;
       }
     .bottom-flowers {
         height: 10%;
