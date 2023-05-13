@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Secret management
 
-Angular-CLI does not support `process.env`. To securly use API keys the app is using `extra.json` file, which is currently in its "template" state (untracked with `git update-index --skip-worktree`);
+Angular-CLI does not support `process.env`. To securly use API keys the app is using `extra.json` file, which is currently in its "template" state.
 When developing locally, manually update its properties with secrets.
-When deploying, use the CI to manipulate its properties (curerntly: GitHub secrets and GitHub Actions to (set JSON fields)[https://github.com/jossef/action-set-json-field]);
+When deploying, use the CI to manipulate its properties (curerntly: GitHub env vars and GitHub Actions to (set JSON fields)[https://github.com/jossef/action-set-json-field]);
 
 ## Development server
 

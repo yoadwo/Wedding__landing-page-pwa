@@ -58,6 +58,7 @@ img {
 }
 
 /* Adjust the height for mobile screens */
+/* on mobile devices make flowers smaller */
 @media (max-width: 767px) {
     .left-flowers {
         height: 15%;
@@ -71,8 +72,3 @@ img {
         top: 75%
     }
   }
-
-/* on mobile devices take some padding between top flowers */
-/* @media (max-width:768px) { 
-    #content { padding-top: 50px; } 
-}  */

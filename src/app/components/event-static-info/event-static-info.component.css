@@ -40,9 +40,3 @@ p, h1, h2, h3, h4 {
 #calendarButton {
 
 }
-.inline-flex-reversed{
-    display: inline-flex;
-    flex-flow: row-reverse;
-    align-items: baseline;
-    gap: 10px;
-}

@@ -3,7 +3,6 @@ on:
   push:	
     branches:	
       - dev
-      - shirley-template-1
       - shirley-template-2
   workflow_dispatch:
 
