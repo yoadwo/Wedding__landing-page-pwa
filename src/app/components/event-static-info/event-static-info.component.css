@@ -38,5 +38,9 @@ p, h1, h2, h3, h4 {
     /* font-family: 'GveretLevin-AAA-Reular'; */
 }
 #calendarButton {
+    align-self: center;
+}
 
+#calendarCaption {
+    margin: 0;
 }
