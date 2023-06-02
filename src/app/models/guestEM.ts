@@ -1,3 +1,3 @@
 export interface guestEM{
-    firstName: string
+    recipient: string
 }

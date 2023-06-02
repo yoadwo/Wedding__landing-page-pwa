@@ -1,22 +1,42 @@
-#btnYes {
-    background-image: url('../../../assets/icons/checkmark.png') !important;
-    border: 0;
-    background-size: 30px;
-    z-index: 10;
-    position: relative;
+.buttons-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Assistant', system-ui;
 }
 
-#btnMaybe {
-    background-image: url('../../../assets/icons/question.png') !important;
-    border: 0;
-    z-index: 10;
-    position: relative;
+.buttons-container div {
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
 }
 
-#btnNo {
-    background-image: url('../../../assets/icons/cross.png') !important;
-            border: 0;
-            background-size: 30px;
-            z-index: 10;
-            position: relative;
+.buttons-container.btn-attending img {
+    max-height: 50px;
+    height: 15vh;
+}
+
+.buttons-container.btn-status img {
+    max-height: 50px;
+    height: 15vh;
+}
+
+p, h1, h2, h3, h4 {
+    font-family: 'Assistant', system-ui;
+    /* padding: 0 10px; */
+    /* margin: 27px 0; */
+    /* font-size: 21px; */
+    color: #333333;
+    font-weight: normal;
+    text-align: center;
+}
+
+#numberInput {
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  width: 60px; /* buttons are originally 60x60*/
 }

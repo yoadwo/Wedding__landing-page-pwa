@@ -20,14 +20,26 @@ jobs:
         node-version: 16.x
     - run: npm ci
       working-directory: ./
-    - run: npm run build-for-PROD --if-present
+    - name: update extras with key for invite code
+      uses: jossef/action-set-json-field@v2.1
+      with:
+        file: ./src/environments/extra.json
+        field: ApiKey_inviteCode
+        value: ${{ vars.ApiKey_inviteCode }}
+    - name: update extras with key for update guest rsvp
+      uses: jossef/action-set-json-field@v2.1
+      with:
+        file: ./src/environments/extra.json
+        field: ApiKey_updateGuestRsvp
+        value: ${{ vars.ApiKey_updateGuestRsvp }}      
+    - run: npm run build-deploy-as-root --if-present
       working-directory: ./
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
         BRANCH: domain
-        FOLDER: ./dist/easy2give-template-1
+        FOLDER: ./dist/shirley-template-1
         
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

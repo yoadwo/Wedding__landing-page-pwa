@@ -3,6 +3,8 @@ on:
   push:	
     branches:	
       - dev
+      - shirley-template-2
+  workflow_dispatch:
 
 defaults:
   run:
@@ -20,6 +22,18 @@ jobs:
         node-version: 16.x
     - run: npm ci
       working-directory: ./
+    - name: update extras with key for invite code
+      uses: jossef/action-set-json-field@v2.1
+      with:
+        file: ./src/environments/extra.json
+        field: ApiKey_inviteCode
+        value: ${{ vars.ApiKey_inviteCode }}
+    - name: update extras with key for update guest rsvp
+      uses: jossef/action-set-json-field@v2.1
+      with:
+        file: ./src/environments/extra.json
+        field: ApiKey_updateGuestRsvp
+        value: ${{ vars.ApiKey_updateGuestRsvp }}
     - run: npm run build-for-dev --if-present
       working-directory: ./
     - name: Deploy
@@ -27,6 +41,6 @@ jobs:
       env:
         REPO: self
         BRANCH: gh-pages
-        FOLDER: ./dist/easy2give-template-1
+        FOLDER: ./dist/shirley-template-1
         
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

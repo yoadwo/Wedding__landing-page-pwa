@@ -6,6 +6,12 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators'
 import { environment } from 'src/environments/environment';
 
+import { default as secrets } from 'src/environments/extra.json';
+
+const promptWhenAccept = 'איזה כיף! נתראה בחתונה';
+const promptWhenMaybe = 'לא לשכוח לחזור לכאן ולעדכן אותנו';
+const promptWhenDecline =  'כמה חבל! מבטיחים להישאר חברים';
+
 @Component({
   selector: 'app-status-select',
   templateUrl: './status-select.component.html',
@@ -48,9 +54,24 @@ export class StatusSelectComponent implements OnInit {
 
   updateGuestsList(guestStatus: guestRsvp) {
     const codeToNameAPI = `${environment.updateGuestRsvpBaseUrl}/update-guest-rsvp/${this.guestStatus.inviteCode}`;
-        this.http.post<guestRsvp>(codeToNameAPI, guestStatus).subscribe(json => {
-          alert('נתראה בחתונה!');
-      })
+    const headers = {
+      'X-API-KEY': secrets['ApiKey_updateGuestRsvp'],
+    }
+    this.http.post<guestRsvp>(codeToNameAPI, guestStatus, {headers}).subscribe(json => {
+      let rsvpResponseText: string;
+      switch (this.guestStatus.status){
+        case rsvp.yes:
+          rsvpResponseText = promptWhenAccept;
+          break;
+        case rsvp.no:
+          rsvpResponseText = promptWhenDecline;
+          break;
+        case rsvp.maybe:
+          rsvpResponseText = promptWhenMaybe;
+          break;
+      }
+      alert(rsvpResponseText);
+  })
   }
 
 }
