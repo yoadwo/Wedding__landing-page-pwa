@@ -1,6 +1,6 @@
 <div>
   <div>
-    <span><h2>?כמה אורחים מגיעים</h2></span>
+    <span><h2>?כמה אורחים תהיו</h2></span>
     <div class="buttons-container btn-attending" style="column-gap: 20px;">      
       <div id="minus" (click)="decAttending()">
         <img src="assets/images/count_dec.png" alt="click to decrease amount of confirmed guests" />
@@ -16,20 +16,17 @@
   <div class="buttons-container btn-status" style="column-gap: 40px;">
     <div (click)="updateStatus(rsvpType.no)">
       <img src="assets/images/invite_no.png" />
-      <p>לא מגיע\ה</p>
+      <p>לצערנו לא</p>
     </div>
 
     <div (click)="updateStatus(rsvpType.maybe)">
       <img src="assets/images/invite_maybe.png" />
-      <p>אולי מגיע\ה</p>
+      <p>לא בטוחים</p>
     </div>
 
     <div (click)="updateStatus(rsvpType.yes)">
       <img src="assets/images/invite_yes.png" />
-      <p>מגיע\ה!</p>
+      <p>ברור שכן</p>
     </div>
   </div>
-  <!-- <div class="form-title" id="select-answers-error" style="color: #f00">
-    לא נבחרה תשובתכם לשאלה. אנא בחרו תשובה ולאחר מכן נסו שנית
-  </div> -->
 </div>

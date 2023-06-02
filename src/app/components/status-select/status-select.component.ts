@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { guestRsvp, rsvp } from '../../models/guestRsvp';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2'
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators'
@@ -70,8 +71,14 @@ export class StatusSelectComponent implements OnInit {
           rsvpResponseText = promptWhenMaybe;
           break;
       }
-      alert(rsvpResponseText);
-  })
+
+      Swal.fire({
+        html: `<div style="font-family: 'Assistant', system-ui">${rsvpResponseText}</div>`,
+        confirmButtonText: 'סבבה',
+        confirmButtonColor: '#dea58d'
+      })
+  })      
+  
   }
 
 }
