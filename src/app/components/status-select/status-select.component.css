@@ -22,7 +22,7 @@
 }
 
 p, h1, h2, h3, h4 {
-    font-family: 'Assistant';
+    font-family: 'Assistant', system-ui;
     /* padding: 0 10px; */
     /* margin: 27px 0; */
     /* font-size: 21px; */

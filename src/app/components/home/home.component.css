@@ -16,7 +16,7 @@ img {
     padding-top: 10px;
     margin-bottom: 20px;
     text-align: center;
-    font-family: 'Assistant';
+    font-family: 'Assistant', system-ui;
     cursor: help;
 }
 
