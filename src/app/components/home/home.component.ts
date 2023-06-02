@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2'
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -41,8 +42,17 @@ export class HomeComponent implements OnInit {
           this.guestName$ = guest.recipient;
         })
       }
-      
     });
+  }
+
+  showHelp(text: string){
+    Swal.fire({
+      html: `<div style="font-family: 'Assistant', system-ui">${text}</div>`,
+      icon: 'question',
+      iconColor: '#ead2c8',
+      confirmButtonText: 'סבבה',
+      confirmButtonColor: '#dea58d'
+    })
   }
 
 }

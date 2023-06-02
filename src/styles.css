@@ -29,3 +29,7 @@ body {
     background-color: grey;
     color: white;
 }
+
+body > div > div > div.swal2-actions > button.swal2-confirm.swal2-styled.swal2-default-outline:focus {
+    box-shadow: 0 0 0 3px #e0904880;
+}
