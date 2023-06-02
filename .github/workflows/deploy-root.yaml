@@ -32,7 +32,7 @@ jobs:
         file: ./src/environments/extra.json
         field: ApiKey_updateGuestRsvp
         value: ${{ vars.ApiKey_updateGuestRsvp }}      
-    - run: npm run build-deploy-as-root --if-present
+    - run: npm run build-for-PROD
       working-directory: ./
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop

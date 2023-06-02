@@ -3,7 +3,7 @@ on:
   push:	
     branches:	
       - dev
-      - shirley-template-2
+      - 'feature/**'
   workflow_dispatch:
 
 defaults:
@@ -34,7 +34,7 @@ jobs:
         file: ./src/environments/extra.json
         field: ApiKey_updateGuestRsvp
         value: ${{ vars.ApiKey_updateGuestRsvp }}
-    - run: npm run build-for-dev --if-present
+    - run: npm run build-for-dev
       working-directory: ./
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
