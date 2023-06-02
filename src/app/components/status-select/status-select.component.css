@@ -1,11 +1,24 @@
-.buttons-container{
+.buttons-container {
     display:flex;
     justify-content: center;
+    align-items: center;
+    font-family: 'Assistant', system-ui;
 }
 
 .buttons-container div {
     cursor: pointer;
     z-index: 1;
+    text-align: center;
+}
+
+.buttons-container.btn-attending img {
+    max-height: 50px;
+    height: 15vh;
+}
+
+.buttons-container.btn-status img {
+    max-height: 50px;
+    height: 15vh;
 }
 
 p, h1, h2, h3, h4 {
