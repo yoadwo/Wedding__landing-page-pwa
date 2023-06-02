@@ -1,15 +1,28 @@
-.buttons-container{
+.buttons-container {
     display:flex;
     justify-content: center;
+    align-items: center;
+    font-family: 'Assistant', system-ui;
 }
 
 .buttons-container div {
     cursor: pointer;
     z-index: 1;
+    text-align: center;
+}
+
+.buttons-container.btn-attending img {
+    max-height: 50px;
+    height: 15vh;
+}
+
+.buttons-container.btn-status img {
+    max-height: 50px;
+    height: 15vh;
 }
 
 p, h1, h2, h3, h4 {
-    font-family: 'Assistant';
+    font-family: 'Assistant', system-ui;
     /* padding: 0 10px; */
     /* margin: 27px 0; */
     /* font-size: 21px; */

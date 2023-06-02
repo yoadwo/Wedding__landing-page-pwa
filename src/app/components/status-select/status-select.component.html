@@ -1,27 +1,32 @@
 <div>
   <div>
     <span><h2>?כמה אורחים מגיעים</h2></span>
-    <div class="buttons-container" style="column-gap: 20px;">      
-      <div id="plus" (click)="incAttending()">
-        <img src="assets/images/count_inc.png" alt="click to increase amount of confirmed guests" />
-      </div>
-      <input type="text" name="guest_amount" id="numberInput" value="{{ guestStatus.attending }}" readonly="readonly" />
+    <div class="buttons-container btn-attending" style="column-gap: 20px;">      
       <div id="minus" (click)="decAttending()">
         <img src="assets/images/count_dec.png" alt="click to decrease amount of confirmed guests" />
+      </div>
+      <input type="text" name="guest_amount" id="numberInput" value="{{ guestStatus.attending }}" readonly="readonly" />
+      <div id="plus" (click)="incAttending()">
+        <img src="assets/images/count_inc.png" alt="click to increase amount of confirmed guests" />
       </div>
     </div>
   </div>
   
   <span><h2>אנא אשרו הגעתכם</h2></span>
-  <div class="buttons-container" style="column-gap: 40px;">
-    <div (click)="updateStatus(rsvpType.yes)">
-      <img src="assets/images/invite_yes.png" />
-    </div>
-    <div (click)="updateStatus(rsvpType.maybe)">
-      <img src="assets/images/invite_maybe.png" />
-    </div>
+  <div class="buttons-container btn-status" style="column-gap: 40px;">
     <div (click)="updateStatus(rsvpType.no)">
       <img src="assets/images/invite_no.png" />
+      <p>לא מגיע\ה</p>
+    </div>
+
+    <div (click)="updateStatus(rsvpType.maybe)">
+      <img src="assets/images/invite_maybe.png" />
+      <p>אולי מגיע\ה</p>
+    </div>
+
+    <div (click)="updateStatus(rsvpType.yes)">
+      <img src="assets/images/invite_yes.png" />
+      <p>מגיע\ה!</p>
     </div>
   </div>
   <!-- <div class="form-title" id="select-answers-error" style="color: #f00">

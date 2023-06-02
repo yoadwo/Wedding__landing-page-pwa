@@ -25,7 +25,7 @@ p, h1, h2, h3, h4 {
     /* padding: 0 10px; */
     /* margin: 27px 0; */
     /* font-size: 21px; */
-    font-family: 'Assistant';
+    font-family: 'Assistant', system-ui;
     color: #333333;
     font-weight: normal;
     text-align: center;
@@ -34,9 +34,12 @@ p, h1, h2, h3, h4 {
     font-size: 50px;
     letter-spacing: 0.03em;
     margin: -15px 0;
-    font-family: 'youth action', sans-serif;
-    /* font-family: 'GveretLevin-AAA-Reular'; */
+    font-family: 'youth action', system-ui;
 }
 #calendarButton {
+    align-self: center;
+}
 
+#calendarCaption {
+    margin: 0;
 }
