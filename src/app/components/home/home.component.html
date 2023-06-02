@@ -1,12 +1,20 @@
-<div id="content" class="col-xs-12">
-  <div id="form_guest_status" *ngIf="this.guestName$; else loading" accept-charset="UTF-8">
+<div>
+  <div *ngIf="this.guestName$; else loading" accept-charset="UTF-8">
+    <img class="top-flowers" src="assets/images/flowers_top.png" alt="Top Flowers Image">
+    <img class="right-flowers" src="assets/images/flowers_right.png" alt="Right Flowers Image">
+	  <img class="left-flowers" src="assets/images/flowers_left.png" alt="Left Flowers Image">
     <app-event-static-info [guestFirstName]="this.guestName$"></app-event-static-info>
     <app-status-select [guestInviteCode]="this.inviteCode$"></app-status-select>
-    <a id="status_wrong_number" style="position: relative; z-index: 5; margin-top: 20px; height: 20px"
-      href="https://l.e2grsvp.com/e/378620854/wrong_number">טעות במספר?</a>
+    <img class="bottom-flowers" src="assets/images/flowers_bottom.png" alt="Bottom Flowers Image">
   </div>
   <ng-template #loading>
-    <h2>הגעת הנה לפנינו..</h2>
-    <img src="assets/images/rafael-mantesso-jimmychoo.gif" alt="running dog while loading page">
+    <h2 id="loading-prompt">..הגעת הנה לפנינו</h2>
+    <img id="loading-animation" src="assets/images/rafael-mantesso-jimmychoo.gif" alt="running dog while loading page">
   </ng-template>
+  <div id="status_wrong_number" 
+    onclick="alert('התקשרו לבעל השמחה ובקשו ממנו לעדכן הגעה במערכת הרישום בצורה ידנית')">
+    ?משהו לא עובד
+  </div>
+
+
 </div>

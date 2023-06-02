@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "easy2give-template-1": {
+    "shirley-template-1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/easy2give-template-1",
+            "outputPath": "dist/shirley-template-1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -112,10 +112,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "easy2give-template-1:build:production"
+              "browserTarget": "shirley-template-1:build:production"
             },
             "development": {
-              "browserTarget": "easy2give-template-1:build:development"
+              "browserTarget": "shirley-template-1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -123,7 +123,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "easy2give-template-1:build"
+            "browserTarget": "shirley-template-1:build"
           }
         },
         "test": {
@@ -146,5 +146,5 @@
       }
     }
   },
-  "defaultProject": "easy2give-template-1"
+  "defaultProject": "shirley-template-1"
 }
