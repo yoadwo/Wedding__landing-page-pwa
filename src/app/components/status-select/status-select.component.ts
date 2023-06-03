@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { guestRsvp, rsvp } from '../../models/guestRsvp';
+import { guestRsvp, guestRsvpResponse , rsvp } from '../../models/guestRsvp';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2'
 
@@ -58,7 +58,15 @@ export class StatusSelectComponent implements OnInit {
     const headers = {
       'X-API-KEY': secrets['ApiKey_updateGuestRsvp'],
     }
-    this.http.post<guestRsvp>(codeToNameAPI, guestStatus, {headers}).subscribe(json => {
+    this.http.post<guestRsvpResponse>(codeToNameAPI, guestStatus, {headers}).subscribe(json => {
+      if (json.code < 0){
+        Swal.fire({
+          text: 'משהו השתבש בתהליך קליטת תגובתכם. אנא פנו ליועד או לשירלי',
+          confirmButtonText: 'תודה על תגובתכם',
+          confirmButtonColor: '#dea58d'
+        })
+        return;
+      }
       let rsvpResponseText: string;
       switch (this.guestStatus.status){
         case rsvp.yes:
@@ -74,7 +82,7 @@ export class StatusSelectComponent implements OnInit {
 
       Swal.fire({
         html: `<div style="font-family: 'Assistant', system-ui">${rsvpResponseText}</div>`,
-        confirmButtonText: 'סבבה',
+        confirmButtonText: 'תודה על תגובתכם',
         confirmButtonColor: '#dea58d'
       })
   })      
