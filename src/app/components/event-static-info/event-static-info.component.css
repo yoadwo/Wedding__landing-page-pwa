@@ -11,14 +11,25 @@ p {
     word-spacing: 0.01em;
     color:black;
     margin: 0;
+    margin-bottom: 12px;
     /* margin: 27px 0; */
     /* padding: 0 10px; */
 }
 #secondary-title {
     color:rgb(48, 48, 48);
     margin-top: 0.33em;
+    font-size: 1.2em;
     /* margin: 27px 0; */
     /* padding: 0 10px; */
+}
+
+#datetime-title {
+    margin-bottom: 12px;
+}
+
+#location {
+    margin-bottom: 20px;
+    font-size: 1.3em;
 }
 
 p, h1, h2, h3, h4 {
@@ -42,4 +53,5 @@ p, h1, h2, h3, h4 {
 
 #calendarCaption {
     margin: 0;
+    margin-top: 5px;
 }

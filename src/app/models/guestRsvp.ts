@@ -9,3 +9,9 @@ export enum rsvp{
     maybe = 0,
     no = -1
 }
+
+export interface guestRsvpResponse {
+    data: any;
+    error: any;
+    code: number;
+}
