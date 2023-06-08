@@ -8,8 +8,10 @@
     <img class="bottom-flowers" src="assets/images/flowers_bottom.png" alt="Bottom Flowers Image">
   </div>
   <ng-template #loading>
-    <h2 id="loading-prompt">..הגעת הנה לפנינו</h2>
-    <img id="loading-animation" src="assets/images/rafael-mantesso-jimmychoo.gif" alt="running dog while loading page">
+    <div id="loader-bg">
+      <div class="loader"></div>
+    </div>
+    <!-- <img id="loading-animation" src="assets/images/rafael-mantesso-jimmychoo.gif" alt="running dog while loading page"> -->
   </ng-template>
   <div id="status_wrong_number" 
     (click)="showHelp('התקשרו לשירלי או ליועד ובקשו מהם לעדכן הגעה במערכת הרישום בצורה ידנית')">
