@@ -88,8 +88,8 @@ img {
     animation: spin 1s infinite linear;
     border: solid 2vmin transparent;
     border-radius: 50%;
-    border-right-color: #09f;
-    border-top-color: #09f;
+    border-right-color: #ed9090;
+    border-top-color: #ed9090;
     box-sizing: border-box;
     height: 20vmin;
     left: calc(50% - 10vmin);
@@ -103,8 +103,8 @@ img {
     animation: spin 2s infinite linear;
     border: solid 2vmin transparent;
     border-radius: 50%;
-    border-right-color: #3cf;
-    border-top-color: #3cf;
+    border-right-color: #dc3741;
+    border-top-color: #dc3741;
     box-sizing: border-box;
     content: "";
     height: 16vmin;
@@ -118,8 +118,8 @@ img {
     animation: spin 3s infinite linear;
     border: solid 2vmin transparent;
     border-radius: 50%;
-    border-right-color: #6ff;
-    border-top-color: #6ff;
+    border-right-color: #9d0808;
+    border-top-color: #9d0808;
     box-sizing: border-box;
     content: "";
     height: 12vmin;
